@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",
+    "@supabase/supabase-js": "^2.49.4",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "date-fns": "^3.3.1",
