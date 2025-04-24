@@ -7,7 +7,7 @@ import { LoginPage } from './LoginPage';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/contai">
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<App />} />

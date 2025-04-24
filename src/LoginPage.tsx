@@ -52,7 +52,7 @@ export function LoginPage() {
       localStorage.setItem('token', 'user-auth-token');
       localStorage.setItem('userid', data.id.toString());
       localStorage.setItem('userName', data.nome);
-      navigate('/dashboard');
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       console.error('Erro ao fazer login:', err);
       setError('Erro de conexão com o servidor');
@@ -64,7 +64,7 @@ export function LoginPage() {
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <div className="flex justify-center mb-6">
           <img
-            src="./img/contai-logo.png"
+            src="./contai/img/contai-logo.png"
             alt="Logo Contai"
             className="h-20"
           />
