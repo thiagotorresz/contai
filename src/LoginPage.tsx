@@ -64,7 +64,7 @@ export function LoginPage() {
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <div className="flex justify-center mb-6">
           <img
-            src="./contai/img/contai-logo.png"
+            src="./img/contai-logo.png"
             alt="Logo Contai"
             className="h-20"
           />
