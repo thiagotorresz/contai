@@ -188,7 +188,7 @@ function App() {
           {/* Logo - centro no desktop, abaixo dos totalizadores no mobile */}
           <div className="w-full flex justify-center">
             <img
-              src="public/img/contai-logo.png"
+              src="./img/contai-logo.png"
               alt="Logo"
               className="h-24 md:h-20 object-contain"
             />
