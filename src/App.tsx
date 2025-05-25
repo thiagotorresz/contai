@@ -248,6 +248,10 @@ function App() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          <div>
+            <ExpenseChart expenses={getExpensesByCategory()} />
+          </div>
+
           <div className="lg:col-span-2">
             <TransactionList
               transactions={getMonthTransactions()}
@@ -255,9 +259,6 @@ function App() {
               onTransactionUpdate={handleTransactionUpdate}
               onTransactionDelete={handleTransactionDelete}
             />
-          </div>
-          <div>
-            <ExpenseChart expenses={getExpensesByCategory()} />
           </div>
         </div>
 
