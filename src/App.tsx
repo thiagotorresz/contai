@@ -107,20 +107,22 @@ function App() {
   };
 
   const calculateMonthlyBalance = (transactions: Transaction[]) => {
-    const monthTransactions = transactions.filter(transaction => {
-      const transactionDate = new Date(transaction.data);
-      return (
-        transactionDate.getMonth() === currentMonth.getMonth() &&
-        transactionDate.getFullYear() === currentMonth.getFullYear()
-      );
-    });
-    const total = monthTransactions.reduce((acc, transaction) => {
-      const valor = Number(transaction.valor);
-      return acc + (transaction.tipo === 'receita' ? valor : -valor);
-    }, 0);
+  const monthTransactions = transactions.filter(transaction => {
+    const transactionDate = parseISO(transaction.data);
+    return (
+      transactionDate.getMonth() === currentMonth.getMonth() &&
+      transactionDate.getFullYear() === currentMonth.getFullYear()
+    );
+  });
+  
+  const total = monthTransactions.reduce((acc, transaction) => {
+    const valor = Number(transaction.valor);
+    return acc + (transaction.tipo === 'receita' ? valor : -valor);
+  }, 0);
 
-    setMonthlyBalance(total);
-  };
+  setMonthlyBalance(total);
+};
+
 
   const getMonthTransactions = () => {
     return transactions.filter(transaction => {
